@@ -30,6 +30,7 @@ services:
       LISTMONK_ADMIN_PASSWORD: '${LISTMONK_ADMIN_PASSWORD:-}'
     volumes:
       - './uploads:/listmonk/uploads:rw'
+      - '/data/certs/ca-certificate.crt:/etc/ssl/certs/ca-certificate.crt:ro'
 
 networks:
   listmonk: {}
